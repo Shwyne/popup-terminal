@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": ["${file}", "-o", "${fileDirname}/output"]
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "${fileDirname}/output",
+            "dependsOn": ["build"]
+        }
+    ]
+}
